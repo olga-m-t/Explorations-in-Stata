@@ -1,0 +1,20 @@
+*Load auto data
+sysuse auto, clear
+
+*Drop the variable price
+drop price
+
+*Keep all variables with the letter "e"
+keep *e*
+
+*Drop all foreign cars
+drop if foreign == 1
+
+*Preserve the existing data
+preserve
+
+*Make change to the data
+drop if weight > 3000
+
+*Restore the original data
+restore

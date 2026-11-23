@@ -1,0 +1,17 @@
+*Load Auto data
+sysuse auto, clear
+
+*Bar chart of the count of repair record categories
+graph bar (count), over(rep78)
+
+*Bar chart of the count of repair record and foreign categories
+graph bar (count), over(rep78) over(foreign)
+
+*Bar graph of the percentage of observations in each category of repair record and foreign
+graph bar, over(rep78) over(foreign)
+
+*Bar graph of the mean of price and standard deviation of price in each category of repair record and foreign
+graph bar (mean) price (sd) price, over(rep78) over(foreign)
+
+*Dot chart of the mean of price and standard deviation of price in each category of repair record 
+graph dot (mean) price (sd) price, over(rep78)
